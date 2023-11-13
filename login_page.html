@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_page</title>
+    <link rel="shortcut icon" href="logo WuwECJa@1x.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_login2iframe.css">
+</head>
+
+<body>
+    <div class="loader">
+        <img src="logo WuwECJa@1x.png" alt="logo" class="loading_page_logo  logo-animation">
+    </div>
+
+    <div class="box-shadow_border-radius hidden">
+        <div class="login_page_div">
+            <div>
+                <div class="login_back_logo">
+                    <a href="login(or)signup.html" class="back_button">&larr;</a><img src="logo WuwECJa@1x.png"
+                        alt="logo" class="logo">
+                </div>
+                <p class="login_signup_title">Login-<i>via OTP</i></p>
+                <p class="via_otp_massage">We will send you an OTP <br> on your mobile number</p>
+            </div>
+            <div>
+                <!-- <button id="togglePassword">Show</button> -->
+                <form action="welcome-page_before.html" method="get" class="next_page">
+                    <input type="tel" name="number" id="number" placeholder="&#128241; Mobile Number" required
+                        maxlength="10" autocomplete="true"
+                        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"><i
+                        class="fa-regular fa-pen-to-square edit_number"></i><br><br>
+                    <input type="password" id="otp" placeholder="&#128172; OTP" maxlength="6" autocomplete="true"
+                        required><span id="toggleButton" class="toggle-password">Show</span><br>
+                    <div class="resend_otp_massage">
+                        &#9755; <span class="timer">60</span> secs left <a href="#" class="resend_otp">Resend code</a>
+                    </div><br>
+                    <p class="number_massage">Please enter valid number</p>
+                    <p class="account_massage">No account yet? Signup</p>
+                    <p class="invalid_otp">Invalid OTP, Please enter valid OTP</p>
+                    <p class="timeout_otp">Timeout: Unable to log in. Please try again.</p><br>
+                    <input class="next_button" type="submit" name="submit" value="Login">
+                </form>
+                <input class="sent_otp_button" type="submit" name="submit" value="Sent">
+                <p class="generated-otp" style="display: none;"></p>
+            </div>
+            <p class="longin_text_link">No account yet?
+                <a href="signup_page1.html" class="longin_link">Signup</a>
+            </p>
+            <div class="underlinep">
+                <p class="underline_black"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="otp_number.js"></script>
+<script src="loading_page.js"></script>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome_Page</title>
+    <link rel="shortcut icon" href="logo WuwECJa@1x.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_welcome_page.css">
+
+</head>
+
+<body>
+    <div class="loader">
+        <img src="logo WuwECJa@1x.png" alt="logo" class="loading_page_logo  logo-animation">
+    </div>
+
+    <div class="box-shadow_border-radius hidden">
+        <div class="welcome_page_div">
+            <div>
+                <form action="#" method="get">
+                    <div class="welcome_page_top">
+                        <input type="text" id="search-input" class="search-input" placeholder="&#128269;Search..."
+                            autocomplete="true" onkeydown="searchOnEnter(event)">
+                        <p class="login_signup_title_dp">
+                            <input type="file" id="imageInput" style="display: none;">
+                            <button id="uploadButton"><img id="previewImage" src="istockphoto-524582571-1024x1024.jpg"
+                                    alt="image01" class="welcome_page_dp"></button>
+                        </p>
+                        <!-- <button onclick="deleteImage()" class="deleteImage_welcome_page"
+                            style="display: none;">🗑️</button> -->
+
+                    </div>
+                </form>
+            </div>
+            <div class="blur-container">
+                <div>
+                    <form action="#" method="get">
+                        <div>
+                            <div class="welcome_page_bottom">
+                                <i class="fa fa-cloud">
+                                    <div>&#9753;</div>Find
+                                </i>
+                                <i class="fa fa-cloud">
+                                    <div>&heartsuit;</div>Travel
+                                </i>
+                                <i class="fa fa-cloud">
+                                    <div>&#9787;</div>Profile
+                                </i>
+                            </div>
+                            <div class="underlinep">
+                                <p class="underline_black_welcome"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="welcome_iframe_parent">
+
+                    <div class="iframe_container iframe_container1">
+                        <iframe src="first_iframe_welcome.html" frameborder="0"
+                            class="welcome_iframe01 welcome_iframe"></iframe>
+                    </div>
+                    <p class="ifarm_Heading">The most popular listing</p>
+                    <div class="iframe_container iframe_container2">
+                        <iframe src="first_iframe_welcome2.html" frameborder="0"
+                            class="welcome_iframe02 welcome_iframe"></iframe>
+                    </div>
+
+                    <p class="ifarm_Heading">The most popular listing</p>
+                    <div class="iframe_container iframe_container3">
+                        <iframe src="first_iframe_welcome3.html" frameborder="0"
+                            class="welcome_iframe03 welcome_iframe"></iframe>
+                    </div>
+
+                    <p class="ifarm_Heading ifarm_Heading3">The most affordable feeds</p>
+                    <div class="iframe_container iframe_container4">
+                        <iframe src="first_iframe_welcome4.html" frameborder="0"
+                            class="welcome_iframe04 welcome_iframe"></iframe>
+                    </div>
+
+                    <div class="start_image_div iframe_image_div5">
+                        <a href="detail_page_a.html" target="_parent" class="hipperLink">
+                            <h4 class="Item-1 item"><img src="05.default 26LcgD@1x (1).png" alt="image01"
+                                    class="start01_image iframe_image5">
+                                Item-1</h4>
+                        </a><br>
+                        <a href="detail_page_a.html" target="_parent" class="hipperLink">
+                            <h4 class="Item-2 item"><img src="05.default 26LcgD@1x (4).png" alt="image02"
+                                    class="start02_image iframe_image5">
+                                Item-2</h4>
+                        </a><br>
+                        <a href="detail_page_a.html" target="_parent" class="hipperLink">
+                            <h4 class="Item-3 item"><img src="05.default 26LcgD@1x (2).png" alt="image03"
+                                    class="start03_image iframe_image5">
+                                Item-3</h4>
+                        </a><br>
+                        <a href="detail_page_a.html" target="_parent" class="hipperLink">
+                            <h4 class="Item-4 item"><img src="05.default 26LcgD@1x (3).png" alt="image01"
+                                    class="start01_image iframe_image5">
+                                Item-4</h4>
+                        </a><br>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="dp_upload.js"></script>
+
+<script src="loading_page.js"></script>
+
+<script>
+
+    function searchOnEnter(event) {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            document.getElementById("search-input").style.display = "none";
+            document.getElementById("search-input").value = "";
+            document.querySelector(".blur-container").classList.remove("blur");
+            document.querySelector(".blur-container").classList.remove("blur");
+        }
+
+        // Check if the pressed key is Enter (key code 13)
+        if (event.key === 'Enter') {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            document.getElementById("search-input").style.display = "none";
+            document.querySelector(".blur-container").classList.remove("blur");
+
+            const searchTerm = document.getElementById("search-input").value;
+            const url = `search_list.html?search=${encodeURIComponent(searchTerm)}`;
+            window.location.href = url;
+        }
+    }
+
+
+    document.getElementById("search-input").addEventListener("focus", function () {
+        document.querySelector(".blur-container").classList.add("blur");
+        document.querySelector("#uploadButton").style.display = 'none';
+    });
+
+    document.getElementById("search-input").addEventListener("blur", function () {
+        document.querySelector(".blur-container").classList.remove("blur");
+        document.querySelector("#uploadButton").style.display = 'inline';
+        document.getElementById("search-input").style.display = "block";
+        document.getElementById("search-input").value = "";
+    });
+</script>
+
+</html>

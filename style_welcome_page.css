@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", "PingFangTC", "PingFangSC";
+}
+
+
+.box-shadow_border-radius {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.logo {
+    width: 109px;
+    height: 97px;
+}
+
+/*********************************Underline-Start***********************************/
+.underlinep {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.underline_black_welcome {
+    width: 134px;
+    height: 5px;
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 20px transparent;
+    border-radius: 2.5cm;
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+/*********************************Underline-End***********************************/
+
+/***********************loading_page.html-Start******************************/
+
+.loading_page_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    width: 100px;
+}
+
+
+/* Define the animation */
+@keyframes logoWidthAnimation {
+
+    0%,
+    100% {
+        width: 90px;
+    }
+
+    /* Start and end with a width of 100px */
+    50% {
+        width: 130px;
+    }
+
+    /* At 50% keyframe, set the width to 200px */
+}
+
+/* Apply the animation to the logo element */
+.loading_page_logo {
+    animation: logoWidthAnimation 1.5s linear infinite;
+    /* Adjust the duration and animation timing as needed */
+}
+
+/***********************loading_page.html-End******************************/
+
+/*************************.welcome_page_div.html-Start*******************************/
+
+.hipperLink {
+    text-decoration: none;
+    color: black;
+}
+
+
+.login_signup_title_dp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    gap: 30px;
+}
+
+.login_signup_title_dp button {
+    border: 0px;
+    border-radius: 50%;
+}
+
+
+.blur {
+    filter: blur(95px);
+    /* Adjust the blur amount as needed */
+    pointer-events: none;
+}
+
+.blur-container {
+    position: relative;
+}
+
+.search-input {
+    filter: none;
+    /* Remove blur effect for search input and button */
+    pointer-events: auto;
+    /* Allow interactions with search input and button */
+}
+
+.search-input {
+    width: 330px;
+    height: 60px;
+    border: 0.5px solid #54BCBD;
+    border-radius: 0.25cm;
+    padding-left: 10px;
+}
+
+
+.deleteImage_welcome_page {
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 315px;
+    margin-top: 32px;
+    background-color: darkred;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.fa-cloud {
+    font-size: 20px;
+    color: white;
+    background-color: #54BCBD;
+    border-radius: 0.5cm;
+    width: 80px;
+    padding: 5px 0px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.welcome_page_top,
+.welcome_page_bottom {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    padding: 5px 0px;
+    margin: 0px 5px;
+}
+
+
+.welcome_page_top {
+    top: 0px;
+}
+
+
+.welcome_page_bottom {
+    bottom: 0px;
+    gap: 58px;
+}
+
+.welcome_page_dp {
+    box-shadow: 1px 1px 5px black;
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+    margin-left: 5px;
+}
+
+.welcome_iframe_parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome_iframe {
+    width: 100%;
+}
+
+.welcome_iframe01 {
+    height: 125px;
+}
+
+.welcome_iframe02 {
+    height: 195px;
+}
+
+.welcome_iframe03 {
+    height: 150px;
+}
+
+.welcome_iframe04 {
+    height: 270px;
+}
+
+.iframe_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.welcome_page_div {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-bottom: 60px;
+    /* background-color: black; */
+}
+
+.iframe_image_div5 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 13px;
+}
+
+.ifarm_Heading {
+    font-size: 24px;
+    padding-left: 13px;
+}
+
+
+.iframe_image5 {
+    width: 100%;
+}
+
+/********::-webkit-scrollbar CSS in (style_login2iframe.css)************/
+
+/*************************.welcome_page_div.html-End*******************************/
+
+
+
+
+@media (max-width: 1100px) {
+    .box-shadow_border-radius {
+        flex-direction: column;
+    }
+
+    .welcome_page_div {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 70%;
+        margin-left: 5px;
+    }
+
+
+    .welcome_page_top {
+        width: 100%;
+    }
+
+    .welcome_page_bottom {
+        width: 100%;
+        justify-content: space-around;
+        /* Adjust the gap as needed */
+    }
+
+}

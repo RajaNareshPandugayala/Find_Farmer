@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", "PingFangTC", "PingFangSC";
+}
+
+
+.box-shadow_border-radius {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.logo {
+    width: 109px;
+    height: 97px;
+}
+
+.home_longin_text_link {
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+
+.longin_text_link {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.longin_link {
+    color: #54BCBD;
+    text-decoration: none;
+    text-shadow: #54BCBD;
+}
+
+
+/*********************************Underline-Start***********************************/
+.underlinep {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.underline_white {
+    width: 134px;
+    height: 5px;
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 20px transparent;
+    border-radius: 2.5cm;
+}
+
+
+.underline_black {
+    width: 134px;
+    height: 5px;
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 20px transparent;
+    border-radius: 2.5cm;
+}
+
+/*********************************Underline-End***********************************/
+
+/***********************loading_page.html-Start******************************/
+
+.loading_page_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    width: 100px;
+}
+
+
+/* Define the animation */
+@keyframes logoWidthAnimation {
+
+    0%,
+    100% {
+        width: 90px;
+    }
+
+    /* Start and end with a width of 100px */
+    50% {
+        width: 130px;
+    }
+
+    /* At 50% keyframe, set the width to 200px */
+}
+
+/* Apply the animation to the logo element */
+.loading_page_logo {
+    animation: logoWidthAnimation 1.5s linear infinite;
+    /* Adjust the duration and animation timing as needed */
+}
+
+/***********************loading_page.html-End******************************/
+
+
+
+.detail_background_image {
+    position: fixed;
+    top: 0;
+    width: 388px;
+    height: 250px;
+    background-image: linear-gradient(to bottom, transparent, #000000), url(start_01.jpg);
+    /* border-radius: 0.5cm; */
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    font-size: 14px;
+    transition: height 0.1s ease;
+
+}
+
+.item_name_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.location_distance_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.detail_back_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back_button {
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.item_name {
+    font-size: 22px;
+}
+
+.detail_text {
+    margin-top: 250px;
+}
+
+.detail_text,
+.see_more_text,
+.photos_textAndView {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+
+.heart_detail_page {
+    color: #54BCBD;
+    background-color: aliceblue;
+    border-radius: 50%;
+    padding: 0px 8px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.priceP {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    line-height: 8px;
+    padding-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+}
+
+.ratingp {
+    display: flex;
+    padding: 10px 25px;
+    justify-content: space-around;
+
+}
+
+.rating {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.ratingNumber {
+    color: #54BCBD;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.ratingScore {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 10px;
+    line-height: 8px;
+    font-size: 14px;
+}
+
+.ratingStar {
+    display: flex;
+    padding: 25px;
+}
+
+.star {
+    color: lightsteelblue;
+    font-size: 20px;
+    margin: 0 -3px;
+}
+
+.star.active {
+    color: #54BCBD;
+}
+
+.photos_text {
+    color: gray;
+}
+
+.photos_view {
+    color: #54BCBD;
+    font-weight: bold;
+}
+
+.iframe_detail_page {
+    width: 100%;
+    height: 100px;
+}
+
+.comment_detail_page {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px;
+}
+
+/* .detail_page_div {
+    background-color: red;
+} */
+
+/********This CSS output seen in (style_welocome_page.css)-Start************/
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* You can adjust the width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the thumb (scrolling part) */
+}
+
+/********This CSS output seen in (style_welocome_page.css)-End************/
+
+.detail_page_photos_div {
+    display: flex;
+    gap: 10px;
+}
+
+/*************************search_list.html-Start***************************/
+
+
+.welcome_page_top {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    padding: 5px 0px;
+    margin: 0px 5px;
+}
+
+.welcome_page_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blur {
+    filter: blur(95px);
+    /* Adjust the blur amount as needed */
+    pointer-events: none;
+}
+
+
+.blur-container {
+    position: relative;
+}
+
+.search-input {
+    filter: none;
+    /* Remove blur effect for search input and button */
+    pointer-events: auto;
+    /* Allow interactions with search input and button */
+}
+
+.search-input {
+    width: 330px;
+    height: 60px;
+    border: 0.5px solid #54BCBD;
+    border-radius: 0.25cm;
+    padding-left: 10px;
+}
+
+
+.welcome_page_top {
+    top: 0px;
+}
+
+
+.total_selected_list {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.total_selected_list a,
+.back_to_home_page {
+    text-decoration: none;
+}
+
+.back_to_home_page {
+    margin-right: 5px;
+    width: 24px;
+}
+
+.total_selected_list img {
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/**************************search_list.html-End****************************/
+
+
+
+
+
+@media (max-width: 1100px) {
+    .box-shadow_border-radius {
+        display: inline;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .detail_background_image {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup_page</title>
+    <link rel="shortcut icon" href="logo WuwECJa@1x.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_login2iframe.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="loader">
+        <img src="logo WuwECJa@1x.png" alt="logo" class="loading_page_logo  logo-animation">
+    </div>
+
+    <div class="box-shadow_border-radius hidden">
+        <div class="signup2_page_div">
+            <div>
+                <div class="login_back_logo">
+                    <a href="signup_page1.html" class="back_button">&larr;</a><img src="logo WuwECJa@1x.png" alt="logo"
+                        class="logo">
+                </div>
+                <p class="login_signup_title_dp">Signup
+                    <input type="file" id="imageInput" style="display: none;">
+                    <button id="uploadButton"><img id="previewImage" src="istockphoto-524582571-1024x1024.jpg"
+                            alt="image01" class="signpu2_dp"></button>
+                </p>
+                <button onclick="deleteImage()" class="deleteImage_signup2_page">🗑️</button>
+            </div>
+            <div>
+                <form action="welcome-page_before.html" method="get" class="signup2_input">
+                    <input type="text" name="nickname" id="nickname" placeholder="&#128100; NickName" required
+                        autocomplete="true">
+                    <input type="email" name="email" id="email" placeholder="&#128386; Email" required
+                        autocomplete="true">
+                    <input type="text" id="town" placeholder="&#127757; Town" required autocomplete="true"><i
+                        class="fa-solid fa-location-dot" id="currentLocationButton"></i>
+                    <!-- <p class="email_massage">The Email Account Already Exists</p> -->
+                    <input class="next_button" type="submit" name="submit" value="Done">
+                    <div><input type="checkbox" id="agreement" required><label for="agreement"
+                            style="color:cadetblue;">&Lang;Registration Agreement&Rang; </label>
+                    </div>
+                </form>
+            </div>
+            <p class="longin_text_link">Already have an account?
+                <a href="login_page.html" class="longin_link">Log in</a>
+            </p>
+            <div class="underlinep">
+                <p class="underline_black"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="dp_upload.js"></script>
+
+<script src="loading_page.js"></script>
+
+<script>
+
+    document.getElementById("currentLocationButton").addEventListener("click", function () {
+        if ("geolocation" in navigator) {
+            // Check if geolocation is available in the browser
+
+            navigator.geolocation.getCurrentPosition(function (position) {
+                // If geolocation is available and the user grants permission, this function will be called with the position data.
+
+                const latitude = position.coords.latitude.toFixed(6);
+                const longitude = position.coords.longitude.toFixed(6);
+
+                // Make a request to Nominatim API for reverse geocoding
+                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const address = data.display_name;
+                        const townInput = document.getElementById("town");
+
+                        townInput.value = `${address}. Lat:${latitude}, Long:${longitude}          `;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }, function (error) {
+                // If the user denies permission or location is blocked, handle the error
+                if (error.code === error.PERMISSION_DENIED || error.code === error.POSITION_UNAVAILABLE) {
+                    alert("Location access is blocked or denied. Please enable location services in your browser settings.");
+                }
+            });
+        } else {
+            alert("Geolocation is not supported by your browser.");
+        }
+    });
+</script>
+
+
+
+</html>

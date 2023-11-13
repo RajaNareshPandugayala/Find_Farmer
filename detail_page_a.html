@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail_Page</title>
+    <link rel="shortcut icon" href="logo WuwECJa@1x.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_detail_page.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="loader">
+        <img src="logo WuwECJa@1x.png" alt="logo" class="loading_page_logo  logo-animation">
+    </div>
+
+    <div class="box-shadow_border-radius hidden">
+        <div class="detail_page_div">
+            <div class="detail_background_image">
+                <div class="detail_back_button">
+                    <a href="#" class="back_button" style="color: aliceblue;" onclick="goBack()">&larr;</a>
+                    <div class="heart_detail_page"> &#9825;</div>
+                </div>
+                <div class="item_name_details">
+                    <div class="location_distance_price">
+                        <p class="item_name">Item Name</p>
+                        <p></p>
+                    </div>
+                    <div class="location_distance_price">
+                        <p>Location</p>
+                        <p><i class="fa-solid fa-location-dot" style="color: #54BCBD;"></i> Distance 2km</p>
+                        <p class="priceP">
+                            <span class="price">₹1080</span><br>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_text">
+                <p>Details</p>
+                <p></p>
+            </div>
+            <div class="see_more_text">
+                <p>Auto-fulfill text <b>See more</b></p>
+                <p></p>
+            </div>
+            <div class="ratingp">
+                <div class="rating">
+                    <div class="ratingNumber" id="ratingNumber">0.0</div>
+                    <div class="ratingScore">
+                        <span>Comprehensive score</span><br>
+                        <span class="ratingStars">
+                            <span class="star" data-rating="1">&#9733;</span>
+                            <span class="star" data-rating="2">&#9733;</span>
+                            <span class="star" data-rating="3">&#9733;</span>
+                            <span class="star" data-rating="4">&#9733;</span>
+                            <span class="star" data-rating="5">&#9733;</span>
+                            <!-- Add more stars as needed -->
+                        </span>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="photos_textAndView">
+                <p class="photos_text">Photos</p>
+                <p class="photos_view">ViewAll</p>
+            </div>
+            <iframe src="detail_page_photos.html" frameborder="0" class="iframe_detail_page"></iframe>
+            <div class="photos_textAndView">
+                <p class="photos_text">Comment</p>
+                <p class="photos_view">ViewAll</p>
+            </div>
+            <div class="comment_detail_page">
+                <img src="comment_default 28KYSns@1x.png" alt="comment01">
+                <img src="comment_default 9ZvsEtj@1x.png" alt="comment01">
+                <img src="comment_default OxGd8bX@1x.png" alt="comment01">
+                <img src="comment_default tyjmbQ5@1x.png" alt="comment01">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="loading_page.js"></script>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    const bgImage = document.querySelector('.detail_background_image');
+
+    function updateBgHeight() {
+        const scrollPosition = window.pageYOffset;
+
+        if (scrollPosition > 150) {
+            bgImage.style.height = '150px';
+        } else {
+            bgImage.style.height = '250px';
+        }
+    }
+    window.addEventListener('scroll', updateBgHeight);
+
+
+/*******************************************************************************/bgImage
+
+    const ratingNumber = document.getElementById('ratingNumber');
+    const stars = document.querySelectorAll('.star');
+
+    let currentRating = 0;
+
+    // Function to update the rating number and star color
+    function updateRating() {
+        ratingNumber.textContent = currentRating.toFixed(1);
+
+        stars.forEach((star, index) => {
+            star.classList.toggle('active', index < currentRating);
+        });
+    }
+
+    // Function to handle mouseover event
+    function handleMouseOver(event) {
+        const hoveredRating = parseFloat(event.target.getAttribute('data-rating'));
+        currentRating = hoveredRating;
+        updateRating();
+    }
+
+    // Function to handle click event
+    function handleClick(event) {
+        const clickedRating = parseFloat(event.target.getAttribute('data-rating'));
+        currentRating = clickedRating;
+        updateRating();
+    }
+
+    // Add event listeners to each star
+    stars.forEach((star) => {
+        star.addEventListener('mouseover', handleMouseOver);
+        star.addEventListener('click', handleClick);
+    });
+
+    // Add event listener to reset rating on mouseout
+    document.querySelector('.rating').addEventListener('mouseout', () => {
+        updateRating();
+    });
+
+</script>
+
+
+</html>

@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", "PingFangTC", "PingFangSC";
+}
+
+
+.box-shadow_border-radius {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.logo {
+    width: 109px;
+    height: 97px;
+}
+
+.home_longin_text_link {
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+
+.longin_text_link {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.longin_link {
+    color: #54BCBD;
+    text-decoration: none;
+    text-shadow: #54BCBD;
+}
+
+
+/*********************************Underline-Start***********************************/
+.underlinep {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.underline_white {
+    width: 134px;
+    height: 5px;
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 20px transparent;
+    border-radius: 2.5cm;
+}
+
+
+.underline_black {
+    width: 134px;
+    height: 5px;
+    background-color: transparent;
+    box-shadow: 0.5px 0.5px 20px transparent;
+    border-radius: 2.5cm;
+}
+
+/*********************************Underline-End***********************************/
+
+/***********************loading_page.html-Start******************************/
+
+.loading_page_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    width: 100px;
+}
+
+
+/* Define the animation */
+@keyframes logoWidthAnimation {
+
+    0%,
+    100% {
+        width: 90px;
+    }
+
+    /* Start and end with a width of 100px */
+    50% {
+        width: 130px;
+    }
+
+    /* At 50% keyframe, set the width to 200px */
+}
+
+/* Apply the animation to the logo element */
+.loading_page_logo {
+    animation: logoWidthAnimation 1.5s linear infinite;
+    /* Adjust the duration and animation timing as needed */
+}
+
+/***********************loading_page.html-End******************************/
+
+/***********************home_page.html-Start******************************/
+
+.home_findFarmer {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.home_best_deals {
+    font-size: 14px;
+}
+
+
+#start_home {
+    background-color: #36CFC9;
+    border: 0.5px solid #36CFC9;
+    width: 300px;
+    height: 60px;
+    font-weight: lighter;
+    border-radius: 2.5cm;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.home_page_div {
+    display: flex;
+    flex-direction: column;
+    gap: 230px;
+    margin-top: 50px;
+}
+
+.home_gap {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/***********************home_page.html-End******************************/
+
+/***********************Login(or)singup_page.html-Start******************************/
+
+.start_image_div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.start_image {
+    width: 300px;
+    height: 210px;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 0.25cm;
+}
+
+
+.start_image_button {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+
+.start_image_button:hover {
+    background-color: #54BCBD;
+    color: #54BCBD;
+    border: 2px solid #54BCBD;
+    cursor: pointer;
+}
+
+
+.image_para01 {
+    font-size: 24px;
+}
+
+.image_para02 {
+    font-size: 14px;
+}
+
+
+#login_home2,
+#signup_home2 {
+    width: 300px;
+    height: 60px;
+    border-radius: 2.5cm;
+    font-weight: lighter;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#login_home2 {
+    background-color: #54BCBD;
+    border: 0.5px solid #54BCBD;
+}
+
+#signup_home2 {
+    background-color: #F5F5F5;
+    border: 0.5px solid #BBBBBB;
+}
+
+
+.login_signup_button form {
+    margin: 10px 0px;
+}
+
+
+.loginSignup_div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/***********************Login(or)singup_page.html-End******************************/
+
+/******************(Singup_page1.html & Login_page.html)-Start*********************/
+
+.login_back_logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    gap: 60px;
+}
+
+.back_button {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.login_signup_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.edit_number {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -25px;
+    cursor: pointer;
+    color: orange;
+}
+
+.via_otp_massage {
+    font-size: 14px;
+}
+
+
+.toggle-password {
+    border-radius: 0 0.25cm 0.25cm 0;
+    padding: 17px 0px;
+    position: absolute;
+    margin-left: -42px;
+    font-size: 14px;
+}
+
+
+.number_massage,
+.account_massage,
+.invalid_otp,
+.timeout_otp {
+    color: red;
+    font-size: 14px;
+}
+
+.resend_otp_massage {
+    font-size: 14px;
+}
+
+.next_button,
+.sent_otp_button {
+    background-color: #36CFC9;
+    border: 0.5px solid #36CFC9;
+    width: 300px;
+    height: 60px;
+    font-weight: lighter;
+    border-radius: 2.5cm;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.login_page_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 33px;
+
+}
+
+/******************(Singup_page1.html & Login_page.html)-End*********************/
+
+/*************************Singup_page2.html-Start*******************************/
+
+.login_signup_title_dp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    gap: 30px;
+}
+
+.login_signup_title_dp button {
+    border: 0px;
+    border-radius: 50%;
+}
+
+.signpu2_dp {
+    box-shadow: 1px 1px 5px black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+
+.deleteImage_signup2_page {
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 85px;
+    margin-top: -17px;
+    background-color: darkred;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.signup2_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+
+#currentLocationButton {
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 0.25cm 0.25cm 0;
+    padding: 16px 7px;
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 20.5px;
+    color: darkblue;
+}
+
+#number,
+#otp,
+#nickname,
+#email,
+#town {
+    width: 270px;
+    height: 50px;
+    border: 0.5px solid #54BCBD;
+    border-radius: 0.25cm;
+    padding-left: 10px;
+}
+
+/* .email_massage {
+    color: red;
+    font-size: 14px;
+} */
+
+input[type="checkbox"] {
+    accent-color: #54BCBD
+}
+
+.signup2_page_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 20px;
+}
+
+/*************************Singup_page2.html-End*******************************/
+
+/*************.iframes.html files  for welcome page.html-Start*********************/
+
+.ifame_welcome_image_page1,
+.ifame_welcome_image_page2,
+.ifame_welcome_image_page3,
+.ifame_welcome_image_page4,
+.ifame_welcome_image_page5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.start01_image {
+    margin-left: 13px;
+}
+
+.iframe_image_div5 {
+    display: inline;
+
+}
+
+
+.iframe_image1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.iframe_image2 {
+    width: 200px;
+    height: 140px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.iframe_image3 {
+    width: 130px;
+    height: 90px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+
+.iframe_image4 {
+    width: 300px;
+    height: 200px;
+    border-radius: 1cm;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.iframe_image5 {
+    width: 240px;
+    height: 90px;
+    border-radius: 0.25cm;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.hipperLink {
+    text-decoration: none;
+    color: black;
+}
+
+
+/********This CSS output seen in (style_welocome_page.css)-Start************/
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    /* You can adjust the width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the thumb (scrolling part) */
+}
+
+/********This CSS output seen in (style_welocome_page.css)-End************/
+
+/*************.iframes.html files  for welcome page.html-End*********************/

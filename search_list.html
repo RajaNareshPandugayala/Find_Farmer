@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search_list</title>
+    <link rel="shortcut icon" href="logo WuwECJa@1x.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_detail_page.css">
+</head>
+
+<body>
+    <div class="loader">
+        <img src="logo WuwECJa@1x.png" alt="logo" class="loading_page_logo  logo-animation">
+    </div>
+
+    <div class="box-shadow_border-radius hidden">
+        <div class="welcome_page_SearchBar_div">
+            <div>
+                <form action="#" method="get">
+                    <div class="welcome_page_top">
+                        <a href="welcome-page.html" id="homeImage"><img src="home.png" alt="house"
+                                class="back_to_home_page"></a>
+                        <input type="text" id="search-input" class="search-input" placeholder="&#128269;Search..."
+                            autocomplete="true" onkeydown="searchOnEnter(event)">
+                    </div>
+                </form>
+            </div>
+            <div class="blur-container">
+                <div class="total_selected_list">
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list1">
+                        <h4><img src="02.default 602zBqQ@1x.png" alt="image01"><br>Item-1</h4>
+                    </a>
+
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list2">
+                        <h4><img src="02.default XrbLMnq@1x.png" alt="image02"><br> Item-2 </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list3">
+                        <h4><img src="start_03.jpg" alt="image03"><br>
+                            Item-3
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list4">
+                        <h4 class="Item-4 item"><img src="start_01.jpg" alt="image01"><br>
+                            Item-4
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list5">
+                        <h4"><img src="start_02.jpg" alt="image02"><br>
+                            Item-5
+                            </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list6">
+                        <h4><img src="start_03.jpg" alt="image03"><br> Item-6
+                        </h4>
+                    </a>
+
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list1">
+                        <h4><img src="start_01.jpg" alt="image01"><br>
+                            Item-1
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list2">
+                        <h4><img src="start_02.jpg" alt="image02"><br>
+                            Item-2
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list3">
+                        <h4><img src="start_03.jpg" alt="image03"><br>
+                            Item-3
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list4">
+                        <h4><img src="start_01.jpg" alt="image01"><br>
+                            Item-4
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list5">
+                        <h4><img src="start_02.jpg" alt="image02"><br>
+                            Item-5
+                        </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list6">
+                        <h4><img src="start_03.jpg" alt="image03"><br>
+                            Item-6
+                        </h4>
+                    </a>
+
+
+
+
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list1">
+                        <h4><img src="04.Group 2 g3N1NLS@1x.png" alt="image01"><br> Your season plan</h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list2">
+                        <h4><img src="start_02.jpg" alt="image02"><br> Find best Equipment </h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list3">
+                        <h4><img src="start_03.jpg" alt="image03"><br> Find best Equipment</h4>
+                    </a>
+
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list1">
+                        <h4><img src="05.default 26LcgD@1x (1).png" alt="image01"><br>Item-1</h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list2">
+                        <h4><img src="05.default 26LcgD@1x (4).png" alt="image02"><br>Item-2</h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list3">
+                        <h4><img src="05.default 26LcgD@1x (2).png" alt="image03"><br>Item-3</h4>
+                    </a>
+                    <a href="detail_page_a.html" target="_parent" class="hipperLink list4">
+                        <h4><img src="05.default 26LcgD@1x (3).png" alt="image01"><br> Item-4</h4>
+                    </a>
+                </div>
+                <div style="display: none;" class="noFound">
+                    <h3>&#128269; No results found.</h3><br>You cantry searching for a different term or recheck for any
+                    spelling
+                    errors.
+                </div>
+            </div>
+        </div>
+</body>
+
+<script src="loading_page.js"></script>
+
+<script>
+
+    window.onload = function () {
+        // Retrieve search term from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('search');
+
+        // Set the search input value
+        document.getElementById("search-input").value = searchTerm;
+
+        // Call the searchImages function with the retrieved search term
+        searchImages(searchTerm);
+
+        // ... (existing code)
+    }
+
+    function searchImages() {
+        var searchTerm = document.getElementById("search-input").value.toLowerCase();
+        var listItems = document.querySelectorAll(".hipperLink");
+        var foundMatch = false; // Flag to check if any matches are found
+
+        for (var i = 0; i < listItems.length; i++) {
+            var item = listItems[i];
+            var itemText = item.textContent.toLowerCase();
+
+            if (itemText.includes(searchTerm)) {
+                // Show the matching item
+                item.style.display = "block";
+                foundMatch = true; // Set the flag to true if a match is found
+            } else {
+                // Hide the non-matching item
+                item.style.display = "none";
+                // document.querySelector(".noFound").style.display = "none";
+            }
+
+        }
+
+        document.getElementById("search-input").value = searchTerm;
+        document.getElementById("search-input").value = "";
+
+
+        // Check if no matches were found and display the "No results found" message
+        if (!foundMatch) {
+            document.querySelector(".noFound").style.display = "inline";
+        } else {
+            document.querySelector(".noFound").style.display = "none";
+        }
+    }
+
+    function searchOnEnter(event) {
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            document.getElementById("search-input").style.display = "none";
+            document.getElementById("search-input").value = "";
+            document.querySelector(".blur-container").classList.remove("blur");
+        }
+
+        // Check if the pressed key is Enter (key code 13)
+        if (event.key === 'Enter') {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Call the searchImages function
+            searchImages();
+            document.getElementById("search-input").style.display = "none";
+            document.querySelector(".blur-container").classList.remove("blur");
+        }
+
+
+    }
+
+
+    document.getElementById("search-input").addEventListener("focus", function () {
+        document.querySelector(".blur-container").classList.add("blur");
+        document.querySelector("#homeImage").style.display = 'none';
+    });
+
+    document.getElementById("search-input").addEventListener("blur", function () {
+        document.querySelector(".blur-container").classList.remove("blur");
+        document.querySelector("#homeImage").style.display = 'inline';
+        document.getElementById("search-input").style.display = "block";
+        document.getElementById("search-input").value = "";
+    });
+
+
+</script>
+
+</html>
